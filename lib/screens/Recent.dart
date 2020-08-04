@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magazine_app/models/News.dart';
+import 'package:magazine_app/screens/ReadNews.dart';
 import 'package:magazine_app/widgets/SecondaryCard.dart';
 
 class Recent extends StatefulWidget {
@@ -19,7 +20,12 @@ class _RecentState extends State<Recent> {
         var recent = recentList[index];
 
         return InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ReadNews(news: recent)));
+          },
           child: Container(
             width: double.infinity,
             height: 155,

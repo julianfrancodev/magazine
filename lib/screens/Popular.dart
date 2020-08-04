@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:magazine_app/contants.dart';
 import 'package:magazine_app/models/News.dart';
+import 'package:magazine_app/screens/ReadNews.dart';
 import 'package:magazine_app/widgets/PrimaryCard.dart';
 import 'package:magazine_app/widgets/SecondaryCard.dart';
 
@@ -25,7 +26,12 @@ class _PopularState extends State<Popular> {
               itemBuilder: (context, index) {
                 var news = popularList[index];
                 return InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ReadNews(news: news)));
+                  },
                   child: Container(
                     margin: EdgeInsets.only(right: 12, left: 12),
                     child: PrimaryCard(
@@ -58,7 +64,12 @@ class _PopularState extends State<Popular> {
               var recent = recentList[index];
 
               return InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ReadNews(news: recent)));
+                },
                 child: Container(
                   width: double.infinity,
                   height: 135,

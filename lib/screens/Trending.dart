@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magazine_app/models/News.dart';
+import 'package:magazine_app/screens/ReadNews.dart';
 import 'package:magazine_app/widgets/PrimaryCard.dart';
 
 class Trending extends StatefulWidget {
@@ -19,7 +20,12 @@ class _TrendingState extends State<Trending> {
         var trending = trendingList[index];
 
         return InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ReadNews(news: trending)));
+          },
           child: Container(
             width: double.infinity,
             height: 300,

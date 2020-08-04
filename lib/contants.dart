@@ -42,3 +42,10 @@ var kTitleCard = GoogleFonts.milonga(
         fontWeight: FontWeight.bold
     )
 );
+
+var descritionStyle = GoogleFonts.milonga(
+    textStyle: TextStyle(
+        fontSize: 15,
+        height: 2
+    )
+);
