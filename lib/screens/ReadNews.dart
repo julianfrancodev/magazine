@@ -31,11 +31,11 @@ class _ReadNewsState extends State<ReadNews> {
                   ),
                   Spacer(),
                   CircleButton(
-                    icon: Icons.share_outlined,
+                    icon: Icons.share,
                     onTap: () {},
                   ),
                   CircleButton(
-                    icon: Icons.favorite_border_outlined,
+                    icon: Icons.favorite_border,
                     onTap: () {},
                   )
                 ],
